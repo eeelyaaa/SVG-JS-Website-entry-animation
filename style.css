@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100;
+    height: 100vh;
+    background-color: #1E1558;
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: changeLogoPosition 2.5s ease forwards 1.5s;
+}
+
+#logo path {
+    fill: none;
+    stroke: white;
+    stroke-width: 1;
+    stroke-dasharray: 6021px;
+    stroke-dashoffset: 6021px;
+    animation: lineAnimation 8s ease forwards 1s;
+}
+
+.Aligner {
+    display: flex;
+    height: 100vh;
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    animation:  slideInFromLeft 3s ease-out forwards 2s ;
+}
+#enterWeb {
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: white;
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+@keyframes lineAnimation {
+    from {
+        stroke-dashoffset: 6021px;
+    }
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+@keyframes changeLogoPosition {
+    to{
+        top: 40%;
+    }
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+  }
